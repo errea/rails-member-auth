@@ -1,48 +1,48 @@
-require "test_helper"
+require 'test_helper'
 
-class CreateTablesControllerTest < ActionDispatch::IntegrationTest
+class PostsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @create_table = create_tables(:one)
+    @post = posts(:one)
   end
 
   test "should get index" do
-    get create_tables_url
+    get posts_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_create_table_url
+    get new_post_url
     assert_response :success
   end
 
-  test "should create create_table" do
-    assert_difference('CreateTable.count') do
-      post create_tables_url, params: { create_table: { email: @create_table.email, password: @create_table.password, username: @create_table.username } }
+  test "should create post" do
+    assert_difference('Post.count') do
+      post posts_url, params: { post: { author_id: @post.author_id, body: @post.body, title: @post.title } }
     end
 
-    assert_redirected_to create_table_url(CreateTable.last)
+    assert_redirected_to post_url(Post.last)
   end
 
-  test "should show create_table" do
-    get create_table_url(@create_table)
+  test "should show post" do
+    get post_url(@post)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_create_table_url(@create_table)
+    get edit_post_url(@post)
     assert_response :success
   end
 
-  test "should update create_table" do
-    patch create_table_url(@create_table), params: { create_table: { email: @create_table.email, password: @create_table.password, username: @create_table.username } }
-    assert_redirected_to create_table_url(@create_table)
+  test "should update post" do
+    patch post_url(@post), params: { post: { author_id: @post.author_id, body: @post.body, title: @post.title } }
+    assert_redirected_to post_url(@post)
   end
 
-  test "should destroy create_table" do
-    assert_difference('CreateTable.count', -1) do
-      delete create_table_url(@create_table)
+  test "should destroy post" do
+    assert_difference('Post.count', -1) do
+      delete post_url(@post)
     end
 
-    assert_redirected_to create_tables_url
+    assert_redirected_to posts_url
   end
 end
