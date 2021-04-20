@@ -1,4 +1,4 @@
-# Ruby on Rails [Building With Forms: Reformer].
+# Ruby on Rails [Building With Authentication: Members_only].
 
 > [Second Collaborative project]
 
@@ -79,8 +79,14 @@ run rails db:migrate to migrate files
 👤 **Eri**
 
 - Github: [@errea](https://github.com/errea)
-- Twitter: [@Erreakay](https://github.com/errea)
+- Twitter: [@Erreakay](https://twitter.com/errea)
 - Linkedin: [Eri Okereafor](https://www.linkedin.com/in/eri-ngozi-okereafor/)
+
+👤 **Julius**
+
+- Github: [@mihdim2020](https://github.com/mihdim2020)
+- Twitter: [@mihndim](https://twitter.com/mihndim)
+- Linkedin: [Mih Julius](https://linkedin.com/Mih Julius)
 
 ## 🤝 Contributing
 
